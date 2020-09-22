@@ -5,5 +5,8 @@ fun main(args: Array<String>) {
 }
 
 fun consume(param: String) {
-    println("""Parameter $param consumed.""")
+    val paramUCase = param.toUpperCase()
+    if (paramUCase != param)
+        println("""[W] ${param} is not in uppercase.""")
+    println("""Parameter ${paramUCase} consumed.""")
 }
